@@ -1,26 +1,104 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/telescope_1"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/telescope_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/switch_telescope"
+            android:layout_marginRight="20dp"
+            android:text="望远镜1"
+            android:textColor="#4a35dd"
+            android:textSize="23sp"/>
+
+        <Switch
+            android:id="@+id/switch_telescope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:checked="false"
+            tools:checked="false" />
+
+        <TextView
+            android:id="@+id/telescope_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/switch_telescope"
+            android:layout_marginLeft="20dp"
+            android:text="望远镜2"
+            android:textColor="#737373"
+            android:textSize="23sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/laser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="激光器:"
+            android:layout_toLeftOf="@+id/switch_laser"
+            android:layout_marginRight="20dp"
+            android:textSize="23sp" />
+
+        <Switch
+            android:id="@+id/switch_laser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textOff="关"
+            android:textOn="开" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="获取控制权"
+            android:layout_toLeftOf="@+id/switch_control"
+            android:layout_marginRight="20dp"
+            android:textSize="23sp" />
+
+        <Switch
+            android:id="@+id/switch_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="望远镜1"/>
+        android:layout_marginTop="80dp">
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
-
-    <TextView
-        android:id="@+id/telescope_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:text="望远镜2"/>
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#fafafa"
+            android:text="确认修改"
+            android:textSize="25sp"
+            android:textColor="#4a35dd" />
+    </RelativeLayout>
 
 </LinearLayout>

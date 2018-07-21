@@ -25,7 +25,9 @@
             android:name=".TelescopeActivity"
             android:label=""
             android:screenOrientation="landscape" />
-        <activity android:name=".SettingActivity"></activity>
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

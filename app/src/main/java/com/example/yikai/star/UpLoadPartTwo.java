@@ -21,7 +21,9 @@ public class UpLoadPartTwo {
     String getContent() {
         return laser + " : " + laserValue + ";" +
                 efocus + " : " + efocusValue + ";" +
-                settem + " : " + settemValue + ";";
+                "m_read:1:" +
+                settem + " : " + settemValue + ";" +
+                "restart:0:" ;
     }
 
     void changeLaserValue(int value) {

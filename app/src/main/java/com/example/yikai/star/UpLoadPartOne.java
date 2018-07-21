@@ -5,16 +5,21 @@ public class UpLoadPartOne {
     private int expValue;
     private String gain;
     private int gainValue;
+    private String gamma;
+    private int gammaValue;
 
     public UpLoadPartOne() {
         this.exp = "exp_ms";
         this.expValue = 15;
         this.gain = "gain";
         this.gainValue = 40;
+        this.gamma = "gamma";
+        this.gammaValue = 40;
     }
 
     String getContent() {
         return exp + " = " + expValue + ";" +
+                gamma + " = " + gammaValue + ";" +
                 gain + " = " + gainValue + ";";
     }
 
